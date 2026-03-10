@@ -1,28 +1,26 @@
-# Task Business Rules
+# Task rules
 
-## 1. Task Status Flow
-- TODO → IN_PROGRESS → DONE
-- Không được quay ngược trạng thái
-- Task ở trạng thái DONE thì không được update nữa
+### 1. Flow of 'Task status'
++ Todo → In progress → Done
++ Không được quay ngược trạng thái
++ Các task ở trạng thái "Done" sẽ không thể update nữa
 
-## 2. Create Task
-- ProjectId phải tồn tại
-- Task mới tạo mặc định status = TODO
+### 2. Create task
++ Phải có ProjectId
++ Task mới sẽ có default status = "Todo"
 
-## 3. Assign Task
-- Task chỉ được assign cho User thuộc cùng Project
-- Nếu User không thuộc Project → reject
+### 3. Assign task
++ Task sẽ chỉ có thể được giao cho user thuộc project đó
++ Nếu user không thuộc project → từ chối
 
-## 4. Update Task Status
-- Không cho update nếu task đã DONE
+### 4. Update task status
++ Không cho update nếu task ở trạng thái "Done"
 
-## 5. Deadline Validation 
-- Deadline phải là ngày tương lai (@Future) 
-- Title không được rỗng, tối đa 50 ký tự 
+### 5. Deadline thingy
++ Deadline không thể là trước ngày tạo task 
++ Title không được rỗng, tối đa 50 ký tự 
 
-## 6. Create Task 
-- Status mặc định = TODO (client không tự set) 
+### 6. Create task
++ Status mặc định = "Todo"
 
-## 7. Assign Task chỉ MANAGER mới được làm 
-
-## 8. Flow: TODO → IN_PROGRESS → DONE (1 chiều)
+### 7. Assign Task -> chỉ Manager mới có thể làm

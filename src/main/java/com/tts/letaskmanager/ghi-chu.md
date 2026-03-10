@@ -1,13 +1,13 @@
-# Task Manager — Mô tả Domain
+# Mô tả - Task manager
 
-## Các đối tượng chính
-- User: người dùng hệ thống, có thể là USER hoặc MANAGER
-- Project: dự án, gồm nhiều Task và nhiều User tham gia
-- Task: công việc thuộc 1 Project, được giao cho 1 User
-- Role: phân quyền (USER / MANAGER)
+### Main entities
++ User: Người dùng hệ thống (users / managers)
++ Project: Dự án, gồm nhiều Task và nhiều User
++ Task: Công việc của 1 Project, được giao cho 1 User
++ Role: Quyền (user / manager)
 
-## Quan hệ
-- 1 User có nhiều Task (1–n)
-- 1 Project có nhiều Task (1–n)
-- Nhiều User thuộc nhiều Project (n–n) qua bảng user_project
-- 1 User có 1 Role
+### Relationships
++ 1 User --> n Task (1–n)
++ 1 Project --> n Task (1–n)
++ n User <--> n Project (n–n) qua user_project
++ 1 User <--> 1 Role (1-1)

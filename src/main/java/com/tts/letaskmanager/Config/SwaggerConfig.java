@@ -24,8 +24,8 @@ public class SwaggerConfig {
                         .version("1.0.0")
                         .description("API quản lý task theo user và project")
                         .contact(new Contact()
-                                .name("Nguyen Huy Binh")
-                                .email("binh@gmail.com")))
+                                .name("Ahhhnope")
+                                .email("asanohikarinonakade@gmail.com")))
                 .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
                 .components(new Components().addSecuritySchemes("bearerAuth", securityScheme));
     }
